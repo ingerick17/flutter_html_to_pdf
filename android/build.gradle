@@ -1,17 +1,18 @@
 group 'com.afur.flutter_html_to_pdf'
 version '1.0-SNAPSHOT'
 
-buildscript {
-    ext.kotlin_version = '1.3.50'
-    repositories {
-        google()
-        mavenCentral()
-    }
+ buildscript {
+     ext.kotlin_version = '1.8.10'
+     repositories {
+         google()
+         mavenCentral()
+     }
 
-    dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
+     dependencies {
+         // Usa la misma versión que tu app principal:
+         classpath 'com.android.tools.build:gradle:7.4.2'
+         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+     }
 }
 
 rootProject.allprojects {
@@ -26,7 +27,7 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace 'com.kodit.flutter_html_to_pdf'
-    compileSdkVersion 30
+    compileSdkVersion 35
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
